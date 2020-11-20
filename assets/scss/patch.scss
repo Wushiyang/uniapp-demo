@@ -1,0 +1,348 @@
+@charset "utf-8";
+.container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: white;
+}
+view { box-sizing: border-box; }
+
+/* 加粗 */
+.b { font-weight: bold; }
+
+/* 普通 */
+.font-nm { font-weight: normal; }
+
+/* Border Satrt */
+.border-t {
+	border-top: 0.5px solid $c-border;
+}
+.border-r {
+	border-right: 0.5px solid $c-border;
+}
+.border-b {
+	border-bottom: 0.5px solid $c-border;
+}
+.border-l {
+	border-left: 0.5px solid $c-border;
+}
+.border-all {
+	border: 1px solid $c-border;
+	border-image: url("@/assets/images/border_image.png") 2 stretch;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2){ 
+	
+	.border-all {
+		border-width:1px;
+		-webkit-border-image: url("@/assets/images/border_image.png") 2 stretch; 
+		border-image: url("@/assets/images/border_image.png") 2 stretch;
+	}
+	
+    .border-t {
+    	border-width: 1px 0 0 0;
+    	border-image: url('@/assets/images/border_image_t.png') 2 0 0 0 repeat;
+    }
+	
+    .border-r {
+    	border-width: 0 1px 0 0;
+    	border-image: url('@/assets/images/border_image_r.png') 0 2 0 0 repeat;
+    }
+	
+    .border-b {
+    	border-width: 0 0 1px 0;
+    	border-image: url('@/assets/images/border_image_b.png') 0 0 2 0 stretch;
+    }
+	
+    .border-l {
+    	border-width: 0 0 0 1px;
+    	border-image: url('@/assets/images/border_image_l.png') 0 0 0 2 repeat;
+    }
+	
+}
+/* Border End */
+
+
+/*文字对齐*/
+.text-c { 
+	text-align: center; 
+} 
+.text-l { 
+	text-align: left; 
+} 
+.text-r { 
+	text-align: right; 
+}
+
+
+/* 超出省略 */
+.text-ep {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+/* 浮动 Satrt */
+.fl { 
+	float: left; 
+}
+.fr { 
+	float: right; 
+}
+.ovh { 
+	overflow: hidden; 
+}
+.clearfix { 
+	clear: both;
+	display: table;
+	content: " ";
+}
+
+/* 图片 cover */
+.bg-cov {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* 边距和填充 */
+.pt5 {
+	padding-top: $num*.5;
+}
+.pt10 {
+	padding-top: $num;
+}
+.pt15 {
+	padding-top: $num*1.5;
+}
+.pt20 {
+	padding-top: $num*2;
+}
+.pt25 {
+	padding-top: $num*2.5;
+}
+.pt30 {
+	padding-top: $num*3;
+}
+.pt35 {
+	padding-top: $num*3.5;
+}
+.pt40 {
+	padding-top: $num*4;
+}
+
+.pr5 {
+	padding-right: $num*.5;
+}
+.pr10 {
+	padding-right: $num;
+}
+.pr15 {
+	padding-right: $num*1.5;
+}
+.pr20 {
+	padding-right: $num*2;
+}
+.pr25 {
+	padding-right: $num*2.5;
+}
+.pr30 {
+	padding-right: $num*3;
+}
+.pr35 {
+	padding-right: $num*3.5;
+}
+.pr40 {
+	padding-right: $num*4;
+}
+
+.pb5 {
+	padding-bottom: $num*.5;
+}
+.pb10 {
+	padding-bottom: $num;
+}
+.pb15 {
+	padding-bottom: $num*1.5;
+}
+.pb20 {
+	padding-bottom: $num*2;
+}
+.pb25 {
+	padding-bottom: $num*2.5;
+}
+.pb30 {
+	padding-bottom: $num*3;
+}
+.pb35 {
+	padding-bottom: $num*3.5;
+}
+.pb40 {
+	padding-bottom: $num*4;
+}
+
+.pl5 {
+	padding-left: $num*.5;
+}
+.pl10 {
+	padding-left: $num;
+}
+.pl15 {
+	padding-left: $num*1.5;
+}
+.pl20 {
+	padding-left: $num*2;
+}
+.pl25 {
+	padding-left: $num*2.5;
+}
+.pl30 {
+	padding-left: $num*3;
+}
+.pl35 {
+	padding-left: $num*3.5;
+}
+.pl40 {
+	padding-left: $num*4;
+}
+
+.mt5 {
+	margin-top: $num*.5;
+}
+.mt10 {
+	margin-top: $num;
+}
+.mt15 {
+	margin-top: $num*1.5;
+}
+.mt20 {
+	margin-top: $num*2;
+}
+.mt25 {
+	margin-top: $num*2.5;
+}
+.mt30 {
+	margin-top: $num*3;
+}
+.mt35 {
+	margin-top: $num*3.5;
+}
+.mt40 {
+	margin-top: $num*4;
+}
+
+.mr5 {
+	margin-right: $num*.5;
+}
+.mr10 {
+	margin-right: $num;
+}
+.mr15 {
+	margin-right: $num*1.5;
+}
+.mr20 {
+	margin-right: $num*2;
+}
+.mr25 {
+	margin-right: $num*2.5;
+}
+.mr30 {
+	margin-right: $num*3;
+}
+.mr35 {
+	margin-right: $num*3.5;
+}
+.mr40 {
+	margin-right: $num*4;
+}
+
+.mb5 {
+	margin-bottom: $num*.5;
+}
+.mb10 {
+	margin-bottom: $num;
+}
+.mb15 {
+	margin-bottom: $num*1.5;
+}
+.mb20 {
+	margin-bottom: $num*2;
+}
+.mb25 {
+	margin-bottom: $num*2.5;
+}
+.mb30 {
+	margin-bottom: $num*3;
+}
+.mb35 {
+	margin-bottom: $num*3.5;
+}
+.mb40 {
+	margin-bottom: $num*4;
+}
+
+.ml5 {
+	margin-left: $num*.5;
+}
+.ml10 {
+	margin-left: $num;
+}
+.ml15 {
+	margin-left: $num*1.5;
+}
+.ml20 {
+	margin-left: $num*2;
+}
+.ml25 {
+	margin-left: $num*2.5;
+}
+.ml30 {
+	margin-left: $num*3;
+}
+.ml35 {
+	margin-left: $num*3.5;
+}
+.ml40 {
+	margin-left: $num*4;
+}
+
+
+
+/* 字体大小 */
+.f20 { 
+	font-size: $num*2; 
+}
+.f22 { 
+	font-size: $num*2.2;
+}
+.f24 { 
+	font-size: $num*2.4; 
+}
+.f26 { 
+	font-size: $num*2.6; 
+}
+.f28 { 
+	font-size: $num*2.8; 
+}
+.f30 { 
+	font-size: $num*3; 
+}
+.f32 { 
+	font-size: $num*3.2; 
+}
+.f34 { 
+	font-size: $num*3.4; 
+}
+.f36 { 
+	font-size: $num*3.6; 
+}
+.f38 { 
+	font-size: $num*3.8; 
+}
+.f40 { 
+	font-size: $num*4;
+}
+
+

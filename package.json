@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+		"@dcloudio/uni-ui": "^1.2.8",
+		"uni-read-pages": "^1.0.5",
+		"uni-simple-router": "^2.0.0-alpha.2"
+	},
+	"devDependencies": {
+		"mockjs": "^1.1.0"
+	}
+}
