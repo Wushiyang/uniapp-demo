@@ -5,7 +5,9 @@ import { RouterMount } from "uni-simple-router";
 import { http, showToast, hideToast, showModal, hideModal } from "@/assets/js/utils/index.js"; // 全局挂载引入，配置相关在该index.js文件里修改
 import filters from '@/assets/js/filters.js'
 import shpAPI from '@/assets/js/api'
-import '@/assets/js/mocker'
+if (process.env.NODE_ENV === 'development') {
+	require('@/assets/js/mocker')
+}
 
 // 过滤器集合
 Object.keys(filters).forEach((key) => {

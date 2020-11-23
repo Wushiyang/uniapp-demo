@@ -3,7 +3,7 @@ let urlConfig = ''
 if( process.env.NODE_ENV === 'development'){
 	
     // 开发环境
-	urlConfig = 'https://jz-api.365haofang.com';
+	urlConfig = 'https://test.com';
 	
 } else {
 	

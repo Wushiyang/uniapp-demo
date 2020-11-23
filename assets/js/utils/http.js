@@ -34,10 +34,12 @@ http.interceptor.request((config, cancel, resolve) => { /* 请求之前拦截器
 	if (config.hasLoading) {
 		showLoading('加载中')
 	}
-	if (config.mock) {
-		resolve(getMocker(config.url))
+	if (process.env.NODE_ENV === 'development' && config.mock) {
+		// mocker请求延时一秒
+		setTimeout(()=>resolve(getMocker(config.url)), 1000)
+	} else {
+		return config
 	}
-	return config
 })
 
 // 必须使用异步函数，注意
@@ -47,7 +49,6 @@ http.interceptor.response(async (response) => { /* 请求之后拦截器 */
 	response.config.hasLoading && hideLoading()
 	return response.data
 }, (response) => { // 请求错误做点什么
-debugger
 	showToast('请求出错!')
 	return response.data;
 })
