@@ -1,26 +1,17 @@
 <template>
 	<view class="container">
+		<TabbarNavigationBar title="北海圈" showSearch />
 		<movableTabbar @tab-tap="handletabtap" :list="tab_list"></MovableTabbar>
-<!-- 		<scroll-view scroll-y class="waterfall">
-			<view class="waterfall_item" v-for="">
-				<image src="" mode=""></image>
-				<text></text>
-				<view class="">
-					<image src="" mode=""></image>
-					<text></text>
-					<uni-icons type=""></uni-icons>
-					<text></text>
-				</view>
-			</view>
-		</scroll-view> -->
 	</view>
 </template>
 
 <script>
 import MovableTabbar from '@/components/movabletabbar.vue'
+import TabbarNavigationBar from '@/components/navigationBar/tabbarNavigationBar.vue'
 export default {
 		components:{
-			MovableTabbar	
+			MovableTabbar,
+			TabbarNavigationBar
 		},
 		data() {
 			return {
@@ -28,7 +19,14 @@ export default {
 			}
 		},
 		onShow() {
-			this.$shpAPI.getHomeInfo().then(res => {
+			const page = this.$mp.page
+			if (typeof page.getTabBar === 'function' && page.getTabBar()) {
+				page.getTabBar().setData({
+					selected: 0,
+					show: true
+				})
+			}
+			this.$api.getHomeInfo().then(res => {
 				const {code, data} = res
 				if (code === 0) {
 					this.tab_list = data.tab_list

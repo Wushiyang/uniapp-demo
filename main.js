@@ -1,12 +1,11 @@
+// "@dcloudio/uni-ui": "^1.2.8",
 import Vue from "vue";
 import App from "./App";
 import store from "./store";
 import { RouterMount } from "uni-simple-router";
-import { http, showToast, hideToast, showModal, hideModal } from "@/assets/js/utils/index.js"; // 全局挂载引入，配置相关在该index.js文件里修改
-import filters from '@/assets/js/filters.js'
-import shpAPI from '@/assets/js/api'
+import { API, filters, showToast, hideToast, showModal, hideModal } from "@/common/js/index.js";
 if (process.env.NODE_ENV === 'development') {
-	require('@/assets/js/mocker')
+	require('@/common/js/mocker')
 }
 
 // 过滤器集合
@@ -15,12 +14,11 @@ Object.keys(filters).forEach((key) => {
 });
 
 Vue.config.productionTip = false;
-Vue.prototype.$http = http;
 Vue.prototype.$showToast = showToast;
 Vue.prototype.$hideToast = hideToast;
 Vue.prototype.$showModal = showModal;
 Vue.prototype.$hideModal = hideModal;
-Vue.prototype.$shpAPI = shpAPI;
+Vue.prototype.$api = API;
 Vue.prototype.$store = store;
 
 App.mpType = "app";

@@ -1,29 +1,15 @@
 // 加载信息，带遮罩
-let needLoadingRequestCount = 0, loadingTimer;
+// let loadingCount = 6, loadingTimer;
 export function showLoading (title = '', mask = false) {
-	if (needLoadingRequestCount === 0) {
-		uni.showLoading({
-			title,
-			mask
-		});
-		// 最长6s自动关闭
-		loadingTimer = setTimeout(() => {
-			if (needLoadingRequestCount > 0) {
-				uni.hideLoading();
-			}
-		}, 1000);
-	}
-	needLoadingRequestCount++;
+	uni.showLoading({
+		title,
+		mask
+	});
 }
 
 // 隐藏遮罩
 export function hideLoading () {
-	if (needLoadingRequestCount <= 0) return;
-	needLoadingRequestCount--;
-	if (needLoadingRequestCount === 0) {
-        loadingTimer && clearTimeout(loadingTimer);
-		uni.hideLoading();
-	}
+	uni.hideLoading()
 }
 
 // 消息框

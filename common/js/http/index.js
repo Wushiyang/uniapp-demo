@@ -1,13 +1,13 @@
-import store from '@/store/index'
-import Request from './luch-request/index'
-import urlConfig from '@/assets/js/config'
-import { getMocker } from '@/assets/js/mocker'
+import store from '@/store/index.js'
+import Request from './luch-request/index.js'
+import config from '../config.js'
+import { getMocker } from '../mocker.js'
 
 const http = new Request();
-import { showLoading, hideLoading, showToast } from './modal.js'
+import { showLoading, hideLoading, showToast } from '../utils.js'
 
 http.setConfig((config) => { /* 设置全局配置 */
-	config.baseUrl = urlConfig /* 根域名不同 */
+	config.baseUrl = config.baseUrl /* 根域名不同 */
 	config.header = {
 		'my-api-version': 'v1',
 		'my-platform': 'wap',
@@ -36,7 +36,10 @@ http.interceptor.request((config, cancel, resolve) => { /* 请求之前拦截器
 	}
 	if (process.env.NODE_ENV === 'development' && config.mock) {
 		// mocker请求延时一秒
-		setTimeout(()=>resolve(getMocker(config.url)), 1000)
+		setTimeout(()=>{
+			config.hasLoading && hideLoading()
+			return resolve(getMocker(config.url))
+		}, 1000)
 	} else {
 		return config
 	}

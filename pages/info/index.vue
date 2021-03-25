@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<TabbarNavigationBar title="北海圈" />
-		我的
+		消息
 	</view>
 </template>
 
@@ -15,7 +15,7 @@
 			const page = this.$mp.page
 			if (typeof page.getTabBar === 'function' && page.getTabBar()) {
 				page.getTabBar().setData({
-					selected: 4,
+					selected: 3,
 					show: true
 				})
 			}
