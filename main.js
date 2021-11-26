@@ -3,9 +3,10 @@ import Vue from "vue";
 import App from "./App";
 import store from "./store";
 import { RouterMount } from "uni-simple-router";
+import nav from '@/src/js/common/nav';
 import { API, filters, showToast, hideToast, showModal, hideModal } from "@/common/js/index.js";
 if (process.env.NODE_ENV === 'development') {
-	require('@/common/js/mocker')
+	require('@/common/js/mocker');
 }
 
 // 过滤器集合
@@ -20,6 +21,7 @@ Vue.prototype.$showModal = showModal;
 Vue.prototype.$hideModal = hideModal;
 Vue.prototype.$api = API;
 Vue.prototype.$store = store;
+Vue.prototype.$nav = nav;
 
 App.mpType = "app";
 

@@ -37,7 +37,7 @@ Component({
       const url = data.path
 			const that = this
 			console.log(data)
-      wx.switchTab({
+      this.$shp.switchTab({
 				url
 			})
     }
