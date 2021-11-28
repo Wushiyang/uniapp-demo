@@ -1,21 +1,22 @@
 <script>
+	import { setSystemUInfo, setNetworkType } from '@/common/js/utils.js'
 	export default {
 		onLaunch: function () {
-			const systemInfo = uni.getSystemInfoSync(); // 此时获取的是空白屏的设备信息
-			systemInfo.iosBottomBlockHeight = res.screenHeight - res.safeArea.bottom; // 不使用res.safeAreaInsets.bottom，因为uniapp在小程序下计算有误
-			// #ifdef APP-PLUS
-			systemInfo.navigationBarHeight = uni.upx2px(88);
-			// #endif
+			setSystemUInfo()
+			uni.hideTabBar()
 			// #ifdef MP-WEIXIN
-        	let { height, top } = wx.getMenuButtonBoundingClientRect();
-            // store.commit('setCachet', wx.getMenuButtonBoundingClientRect());
-            systemInfo.navigationBarHeight =  top - res.statusBarHeight + height + (top - res.statusBarHeight)*2;
-            systemInfo.defaultNavigationBarHeight = (top - res.statusBarHeight) * 2 + height;
+			uni.showShareMenu({
+				withShareTicket: true,
+				menus: ['shareAppMessage', 'shareTimeline']
+			});
 			// #endif
-			this.$store.commit('setSystemInfo', systemInfo);
-			// const { top, height } = uni.getMenuButtonBoundingClientRect();
-			// this.$store.state.statusBarHeight = systemInfo.statusBarHeight;
-			// this.$store.state.navigationBarHeight = height + (top - systemInfo.statusBarHeight) * 2;
+			//#ifdef APP-PLUS
+			//消息推送别名设置
+			//this.zhPush.bindAlias("test_alias")
+			//console.log("消息推送：",this.zhPush.getVersion())
+			//this.$store.commit("logout");
+			//#endif
+			setNetworkType()
 		},
 		onShow: function () {
 			console.log('App Show');

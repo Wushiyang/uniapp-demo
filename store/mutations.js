@@ -1,21 +1,20 @@
 
-// 设置 Hash
-export const setHash = (state, value) => {
-    state.dev_hash = value;
-}
-
-// 设置 端口类型
-export const setPort = (state, value) => {
-    state.port = value;
-}
-
 // 登录
-export const login = (state, modal) => {
-    state.token = modal.token;
-	state.userInfo = modal.userInfo
+export const login = (state, value) => {
+    state.token = value.token;
+	state.userInfo = value.userInfo
 }
 // 退出
-export const logout = (state, modal) => {
+export const logout = (state) => {
     state.token = '';
-	state.userInfo = {}
+	state.userInfo = null
 }
+// 设置设备信息
+export const setSystemInfo = (state, value) => {
+    state.systemInfo = value;
+};
+// 网络状态
+export const setNetworkInfo = (state,data) =>{
+	state.isNetworkConnected = data.isConnected;
+	state.networkType = data.networkType;
+};
