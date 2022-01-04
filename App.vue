@@ -3,12 +3,12 @@
 	export default {
 		onLaunch: function () {
 			setSystemUInfo()
-			uni.hideTabBar()
+			// uni.hideTabBar()
 			// #ifdef MP-WEIXIN
-			uni.showShareMenu({
-				withShareTicket: true,
-				menus: ['shareAppMessage', 'shareTimeline']
-			});
+			// uni.showShareMenu({
+			// 	withShareTicket: true,
+			// 	menus: ['shareAppMessage', 'shareTimeline']
+			// });
 			// #endif
 			//#ifdef APP-PLUS
 			//消息推送别名设置

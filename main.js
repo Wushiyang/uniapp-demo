@@ -2,12 +2,14 @@
 import Vue from "vue";
 import App from "./App";
 import store from "./store";
-import { RouterMount } from "uni-simple-router";
-import nav from '@/src/js/common/nav';
+// import { RouterMount } from "uni-simple-router";
+import nav from '@/common/js/nav';
 import { API, filters, showToast, hideToast, showModal, hideModal } from "@/common/js/index.js";
-if (process.env.NODE_ENV === 'development') {
-	require('@/common/js/mocker');
-}
+import { mixins } from '@/common/js/mixins/mixin.js';
+Vue.mixin(mixins);
+// if (process.env.NODE_ENV === 'development') {
+// 	require('@/common/js/mocker');
+// }
 
 // 过滤器集合
 Object.keys(filters).forEach((key) => {
@@ -32,7 +34,8 @@ const app = new Vue({
 
 //v1.3.5起 H5端 你应该去除原有的app.$mount();使用路由自带的渲染方式
 // #ifdef H5
-RouterMount(app, "#app");
+// RouterMount(app, "#app");
+app.$mount();
 // #endif
 
 // #ifndef H5

@@ -1,10 +1,4 @@
 //----------------- 主题 -----------------
-.container {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	position: relative;
-}
 .bg-navigation {
 	background-color: #ededed;
 }
@@ -27,79 +21,15 @@
 	border-bottom-width: 1px;
 	border-bottom-color: #f0f0f0;
 }
-//----------------- 尺寸 -----------------
-.h60 {
-	height: 60rpx;
-}
-.h76 {
-	height: 76rpx;
-}
-.w80 {
-	width: 80rpx;
-}
-.h80 {
-	height: 80rpx;
-}
-.w90 {
-	width: 90rpx;
-}
-.h90 {
-	height: 90rpx;
-}
-.w100 {
-	width: 100rpx;
-}
-.w110 {
-	width: 110rpx;
-}
-.h100 {
-	height: 100rpx;
-}
-.h105 {
-	height: 105rpx;
-}
-.w128 {
-	width: 128rpx;
-}
-.h130 {
-	height: 130rpx;
-}
-.w140 {
-	width: 140rpx;
-}
-.h140 {
-	height: 140rpx;
-}
-.w280 {
-	width:  280rpx;
-}
-.w320 {
-	width: 320rpx;
-}
-.w450 {
-	width: 450rpx;
-}
-.w520 {
-	width: 520rpx;
-}
-.w490 {
-	width: 490rpx;
-}
-.w610 {
-	width: 610rpx;
-}
-.w750 {
-	width: 750rpx;
-}
-.lh100 {
-	line-height: 100rpx;
-}
 //----------------- 字体大小 -----------------
-.f15 {
-	font-size: 15rpx;
+.f14 {
+	font-size: 14rpx;
 }
 .f20 {
 	font-size: 20rpx;
+}
+.f22 {
+	font-size: 22rpx;
 }
 .f25 {
 	font-size: 25rpx;
@@ -132,8 +62,14 @@
 .c-black {
 	color: black;
 }
+.c-14 {
+	color: #141414;
+}
 .c-3f4c6e {
 	color: #3f4c6e;
+}
+.c-33 {
+	color: #333333;
 }
 .c-b2 {
 	color: #b2b2b2;
@@ -154,12 +90,6 @@
 //----------------- 盒模型 -----------------
 .ovh {
 	overflow: hidden;
-}
-.border-top {
-	border-top-width: 1rpx;
-}
-.border-bottom {
-	border-bottom-width: 1px;
 }
 .round4 {
 	border-radius: 4rpx;
@@ -346,6 +276,9 @@
 	/* #endif */
 }
 //----------------- 块排版 ----------------- 
+.relative {
+	position: relative;
+}
 .fixed {
 	position: fixed;
 }
@@ -364,31 +297,39 @@
 .top0 {
 	top: 0;
 }
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
 .flex {
 	display: flex;
 	flex-direction: column;
 }
-
 .flex1 {
 	flex: 1;
 }
-.flex-direction-row {
+.flex-row {
 	flex-direction: row;
 }
-.align-item-center {
+.align-items-center {
 	align-items: center;
 }
-.align-item-start {
+.align-items-start {
 	align-items: flex-start;
 }
-.align-item-end {
+.align-items-end {
 	align-items: flex-end;
 }
-.align-item-stretch {
+.align-items-stretch {
 	align-items: stretch;
 }
 .justify-content-between {
 	justify-content: space-between;
+}
+.justify-content-around {
+	justify-content: space-around;
 }
 .justify-content-center {
 	justify-content: center;

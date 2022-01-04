@@ -1,45 +1,49 @@
 {
     "pages": [
-				{
+		{
             "path": "pages/index/index",
             "style": {
                 "navigationBarTitleText": "首页"
             }
         },
-				{
-            "path": "pages/dynamics/dynamics",
-            "style": {
-                "navigationBarTitleText": "关注",
-                "enablePullDownRefresh": true
-            }
-        }, 
-				{
-            "path": "pages/message/message",
-            "style": {
-                "navigationBarTitleText": "消息"
-            }
-        }, 
-				{
-            "path": "pages/user/user",
-            "style": {
-                "navigationBarTitleText": "我的",
-                "enablePullDownRefresh": true
-            }
-        }
+		{
+		    "path": "pages/attention/index",
+		    "style": {
+		        "navigationBarTitleText": "关注"
+		    }
+		},
+		{
+		    "path": "pages/message/index",
+		    "style": {
+		        "navigationBarTitleText": "消息"
+		    }
+		},
+		{
+		    "path": "pages/user/index",
+		    "style": {
+		        "navigationBarTitleText": "我"
+		    }
+		},
+		{
+		    "path": "pages/example/index",
+		    "style": {
+		        "navigationBarTitleText": "例子"
+		    }
+		}
     ],
-    "subPackages": [
-			{
-        "root": "subPack",
-        "pages": [
-					{
-						"path": "index/index",
-						"style": {
-								"navigationBarTitleText": "个人主页"
-						}
-					}
-        ]
-			}
-		],
+	//    "subPackages": [
+	// 	{
+	// 		"root": "subPack",
+	// 		"pages": [
+	// 			{
+	// 				"path": "index/index",
+	// 				"style": {
+	// 					"navigationBarTitleText": "个人主页"
+	// 				}
+	// 			}
+	// 		]
+	// 	}
+	// ],
     // "preloadRule": {
     //     "pages/index/index": {
     //         "network": "all",
@@ -47,14 +51,11 @@
     //     }
     // },
     "globalStyle": {
-        "navigationBarTextStyle": "black",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#FFFFFF",
-        "navigationBarTitleText": "北海知道",
-        "navigationStyle": "custom",
-        "app-plus": { //app平台
-            "softinputMode": "adjustPan"
-        }
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uniapp模板",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle":"custom"
     },
     "condition": { //模式配置，仅开发期间生效
         "current": 0, //当前激活的模式(list 的索引项)
@@ -74,31 +75,36 @@
         "height": "50px",
         "fontSize": "12px",
         "iconWidth": "24px",
-        "list": [{
-            "pagePath": "pages/index/index",
-            "iconPath": "static/images/home.png",
-            "selectedIconPath": "static/images/home-h.png",
-            "text": "首页"
-        },{
-            "pagePath": "pages/dynamics/dynamics",
-            "iconPath": "static/images/attention.png",
-            "selectedIconPath": "static/images/attention-h.png",
-            "text": "关注"
-        }, {
-            "pagePath": "pages/message/message",
-            "iconPath": "static/images/message.png",
-            "selectedIconPath": "static/images/message-h.png",
-            "text": "消息"
-        }, {
-            "pagePath": "pages/user/user",
-            "iconPath": "static/images/me.png",
-            "selectedIconPath": "static/images/me-h.png",
-            "text": "我"
-        }]
-    },
-    "permission": {
-        "scope.userLocation": {
-            "desc": "你的位置信息将用于小程序位置接口的效果展示啊"
-        }
+        "list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/home.png",
+				"selectedIconPath": "static/images/home-h.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/attention/index",
+				"iconPath": "static/images/attention.png",
+				"selectedIconPath": "static/images/attention-h.png",
+				"text": "关注"
+			}, 
+			{
+				"pagePath": "pages/message/index",
+				"iconPath": "static/images/message.png",
+				"selectedIconPath": "static/images/message-h.png",
+				"text": "消息"
+			}, 
+			{
+				"pagePath": "pages/user/index",
+				"iconPath": "static/images/me.png",
+				"selectedIconPath": "static/images/me-h.png",
+				"text": "我"
+			}
+		]
     }
+    // "permission": {
+    //     "scope.userLocation": {
+    //         "desc": "你的位置信息将用于小程序位置接口的效果展示啊"
+    //     }
+    // }
 }
