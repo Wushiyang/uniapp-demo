@@ -1,45 +1,34 @@
-// "@dcloudio/uni-ui": "^1.2.8",
-import Vue from "vue";
-import App from "./App";
-import store from "./store";
-// import { RouterMount } from "uni-simple-router";
-import nav from '@/common/js/nav';
-import { API, filters, showToast, hideToast, showModal, hideModal } from "@/common/js/index.js";
-import { mixins } from '@/common/js/mixins/mixin.js';
-Vue.mixin(mixins);
-// if (process.env.NODE_ENV === 'development') {
-// 	require('@/common/js/mocker');
-// }
+import Vue from 'vue'
+import App from './App'
+import uView from "uview-ui";
+import store from './store'
 
-// 过滤器集合
-Object.keys(filters).forEach((key) => {
-  Vue.filter(key, filters[key]);
-});
+Vue.use(uView);
 
-Vue.config.productionTip = false;
-Vue.prototype.$showToast = showToast;
-Vue.prototype.$hideToast = hideToast;
-Vue.prototype.$showModal = showModal;
-Vue.prototype.$hideModal = hideModal;
-Vue.prototype.$api = API;
-Vue.prototype.$store = store;
-Vue.prototype.$nav = nav;
+// 注册全局组件
+// import MescrollBody from "@/components/mescroll-uni/mescroll-body.vue"
+// import MescrollUni from "@/components/mescroll-uni/mescroll-uni.vue"
 
-App.mpType = "app";
+// Vue.component('mescroll-body', MescrollBody)
+// Vue.component('mescroll-uni', MescrollUni)
+
+Vue.config.productionTip = false
+
+App.mpType = 'app'
 
 const app = new Vue({
-  store,
-  ...App,
-});
+    store,
+    ...App
+})
 
-//v1.3.5起 H5端 你应该去除原有的app.$mount();使用路由自带的渲染方式
-// #ifdef H5
-// RouterMount(app, "#app");
-app.$mount();
-// #endif
+// http拦截器，将此部分放在new Vue()和app.$mount()之间，才能App.vue中正常使用
+// import httpInterceptor from '@/common/http.interceptor.js'
 
-// #ifndef H5
-app.$mount(); //为了兼容小程序及app端必须这样写才有效果
-// #endif
+// Vue.use(httpInterceptor, app)
 
-export default app;
+// // http接口API集中管理引入部分
+// import httpApi from '@/common/http.api.js'
+
+// Vue.use(httpApi, app)
+
+app.$mount()

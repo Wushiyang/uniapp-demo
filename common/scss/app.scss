@@ -2,21 +2,18 @@ page {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	height: auto;
-	background-color: #ededed;
+	background-color: $yy-bg;
 }
 
 @font-face {
-font-family: "iconfont";
-  src: url('//at.alicdn.com/t/font_2288342_idqpa6px7fm.eot?t=1609435542612'); /* IE9 */
-  src: url('//at.alicdn.com/t/font_2288342_idqpa6px7fm.eot?t=1609435542612#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_2288342_idqpa6px7fm.woff?t=1609435542612') format('woff'),
-  url('//at.alicdn.com/t/font_2288342_idqpa6px7fm.ttf?t=1609435542612') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-  url('//at.alicdn.com/t/font_2288342_idqpa6px7fm.svg?t=1609435542612#iconfont') format('svg'); /* iOS 4.1- */
+  font-family: 'yyfont';  /* Project id 3127085 */
+  src: url('//at.alicdn.com/t/font_3127085_nqjqmuhi8fm.woff2?t=1641663601676') format('woff2'),
+       url('//at.alicdn.com/t/font_3127085_nqjqmuhi8fm.woff?t=1641663601676') format('woff'),
+       url('//at.alicdn.com/t/font_3127085_nqjqmuhi8fm.ttf?t=1641663601676') format('truetype');
 }
 
-.iconfont {
-  font-family: "iconfont" !important;
+.yyfont {
+  font-family: "yyfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
