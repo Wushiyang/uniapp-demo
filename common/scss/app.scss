@@ -1,3 +1,5 @@
+@import './iconfont.scss';
+
 page {
 	display: flex;
 	flex-direction: column;
@@ -5,17 +7,171 @@ page {
 	background-color: $yy-bg;
 }
 
-@font-face {
-  font-family: 'yyfont';  /* Project id 3127085 */
-  src: url('//at.alicdn.com/t/font_3127085_nqjqmuhi8fm.woff2?t=1641663601676') format('woff2'),
-       url('//at.alicdn.com/t/font_3127085_nqjqmuhi8fm.woff?t=1641663601676') format('woff'),
-       url('//at.alicdn.com/t/font_3127085_nqjqmuhi8fm.ttf?t=1641663601676') format('truetype');
+body {
+  background: $yy-bg;
+}
+i {
+  font-style: normal;
+}
+view,
+cover-view {
+  box-sizing: border-box;
+  line-height: 1;
+}
+view {
+  white-space:normal;
+  word-break:break-all;
+  word-wrap: break-word;
+}
+/* 弹性布局 */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex-column {
+    flex-direction: column; /* 设置元素内弹性盒元素的方向为相反的顺序 */
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap; /* 让弹性盒元素在必要的时候拆行 */
+}
+.jc-between {
+ justify-content: space-between; /* 两端对齐 */
+}
+.jc-around {
+  justify-content: space-around; /* 两端有间距 */
+}
+.jc-center {
+  justify-content: center; /* 水平居中 */
+}
+.jc-start {
+  justify-content: flex-start;
+}
+.jc-end {
+  justify-content: flex-end; /* 水平右中 */
+}
+.ai-center {
+  align-items: center; /* 垂直居中 */
+}
+.ai-end {
+  align-items: flex-end; /* 垂直向尾对齐 */
+}
+.ai-start {
+  align-items: flex-start; /* 垂直向头对齐 */
+}
+.flex-1 {
+  flex: 1;
 }
 
-.yyfont {
-  font-family: "yyfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* -------------- 内外边距 ----------------------------------*/
+/* 隐藏 */
+.hide {
+    display: none;
+}
+
+/* 字体颜色 */
+.c-white {
+  color: #FFFFFF;
+}
+.c-3c9cff {
+  color: #3c9cff;
+}
+.c-5ac725 {
+  color: #5ac725;
+}
+// .c-main {
+//   color: $c-main;
+// }
+// .c-sub {
+//   color: $c-sub;
+// }
+
+/* 背景颜色 */
+.b-gray {
+    background: $yy-bg;
+}
+.b-white {
+    background: $yy-bg-white;
+}
+
+/*文字对齐*/
+.tac {
+    text-align: center;
+}
+.tal {
+    text-align: left;
+}
+.tar {
+    text-align: right;
+}
+
+/* 超出省略 */
+.text-ep {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.text-ep-2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-ep-3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 浮动 Satrt */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.ovh {
+    overflow: hidden;
+}
+.clearfix {
+    clear: both;
+    display: table;
+    content: ' ';
+}
+
+/* 边距和填充 */
+.ml12 {
+  margin-left: 12rpx;
+}
+.mr12 {
+    margin-right: 12rpx;
+}
+.mr20 {
+    margin-right: 20rpx;
+}
+.f24 {
+    font-size: 24rpx;
+}
+.f32 {
+    font-size: 32rpx;
+}
+.f44 {
+  font-size: 44rpx;
+}
+.f48 {
+    font-size: 48rpx;
+}
+.fw700 {
+    font-weight: 700;
 }

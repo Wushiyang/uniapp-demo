@@ -51,20 +51,20 @@
   "tabBar": {
     "list": [{
         "pagePath": "pages/tabbar/home/index",
-        "iconPath": "static/images/home.png",
-        "selectedIconPath": "static/images/home-h.png",
+        "iconPath": "static/images/tabbar/home.png",
+        "selectedIconPath": "static/images/tabbar/home_h.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/tabbar/form/index",
-        "iconPath": "static/images/attention.png",
-        "selectedIconPath": "static/images/attention-h.png",
+        "iconPath": "static/images/tabbar/home.png",
+        "selectedIconPath": "static/images/tabbar/home_h.png",
         "text": "表单"
       },
       {
         "pagePath": "pages/tabbar/my/index",
-        "iconPath": "static/images/me.png",
-        "selectedIconPath": "static/images/me-h.png",
+        "iconPath": "static/images/tabbar/my.png",
+        "selectedIconPath": "static/images/tabbar/my_h.png",
         "text": "我"
       }
     ]

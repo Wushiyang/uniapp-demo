@@ -48,12 +48,12 @@
 	 * @property {String | Number}	value			右侧的内容
 	 * @property {String}			icon			左侧图标名称，或者图片链接(本地文件建议使用绝对地址)
 	 * @property {String | Number}	titleWidth		标题的宽度，单位任意，数值默认为px单位
-	 * @property {Boolean}			disabled		是否禁用cell	
+	 * @property {Boolean}			disabled		是否禁用cell
 	 * @property {Boolean}			border			是否显示下边框 (默认 true )
 	 * @property {Boolean}			center			内容是否垂直居中(主要是针对右侧的value部分) (默认 false )
 	 * @property {String}			url				点击后跳转的URL地址
 	 * @property {String}			linkType		链接跳转的方式，内部使用的是uView封装的route方法，可能会进行拦截操作 (默认 'navigateTo' )
-	 * @property {Boolean}			clickable		是否开启点击反馈(表现为点击时加上灰色背景) （默认 false ） 
+	 * @property {Boolean}			clickable		是否开启点击反馈(表现为点击时加上灰色背景) （默认 false ）
 	 * @property {Boolean}			isLink			是否展示右侧箭头并开启点击反馈 （默认 false ）
 	 * @property {Boolean}			required		是否显示表单状态下的必填星号(此组件可能会内嵌入input组件) （默认 false ）
 	 * @property {String}			rightIcon		右侧的图标箭头 （默认 'arrow-right'）
@@ -61,10 +61,10 @@
 	 * @property {Object | String}			rightIconStyle	右侧箭头图标的样式
 	 * @property {Object | String}			titleStyle		标题的样式
 	 * @property {Object | String}			iconStyle		左侧图标样式
-	 * @property {String}			size			单位元的大小，可选值为 large，normal，mini 
+	 * @property {String}			size			单位元的大小，可选值为 large，normal，mini
 	 * @property {Boolean}			stop			点击cell是否阻止事件传播 (默认 true )
 	 * @property {Object}			customStyle		定义需要用到的外部样式
-	 * 
+	 *
 	 * @event {Function}			click			点击cell列表时触发
 	 * @example 该组件需要搭配cell-group组件使用，见官方文档示例
 	 */
