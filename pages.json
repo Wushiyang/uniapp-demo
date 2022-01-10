@@ -9,9 +9,9 @@
       }
     },
     {
-      "path": "pages/tabbar/form/index",
+      "path": "pages/tabbar/components/index",
       "style": {
-        "navigationBarTitleText": "表单"
+        "navigationBarTitleText": "组件"
       }
     },
     {
@@ -56,9 +56,9 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/tabbar/form/index",
-        "iconPath": "static/images/tabbar/home.png",
-        "selectedIconPath": "static/images/tabbar/home_h.png",
+        "pagePath": "pages/tabbar/components/index",
+        "iconPath": "static/images/tabbar/components.png",
+        "selectedIconPath": "static/images/tabbar/components_h.png",
         "text": "表单"
       },
       {

@@ -1,5 +1,6 @@
 <template>
   <view class="page-container">
+    
     <view class="userInfo">
       <view class="flex flex-row ai-center">
         <view class="mr20">
@@ -9,7 +10,7 @@
       </view>
     </view>
 
-    <u-cell-group>
+    <u-cell-group class="b-white">
     	<u-cell>
         <template slot="icon">
           <view class="yyfont yyfont-gerenziliao f44 c-5ac725"></view>

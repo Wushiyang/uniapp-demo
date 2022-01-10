@@ -81,6 +81,18 @@ view {
 .c-5ac725 {
   color: #5ac725;
 }
+.c-primary {
+  color: $yy-color-primary;
+}
+.c-regular {
+  color: $yy-color-regular;
+}
+.c-sub {
+  color: $yy-color-sub;
+}
+.c-placeholder {
+  color: $yy-color-placeholder;
+}
 // .c-main {
 //   color: $c-main;
 // }
@@ -159,6 +171,12 @@ view {
 }
 .mr20 {
     margin-right: 20rpx;
+}
+.mb20 {
+    margin-bottom: 20rpx;
+}
+.mb40 {
+    margin-bottom: 40rpx;
 }
 .f24 {
     font-size: 24rpx;

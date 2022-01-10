@@ -29,10 +29,10 @@
             text: '首页'
           },
           {
-            pagePath: '/pages/tabbar/form/index',
-            iconPath: '/static/images/tabbar/form.png',
-            selectedIconPath: '/static/images/tabbar/form_h.png',
-            text: '表单'
+            pagePath: '/pages/tabbar/components/index',
+            iconPath: '/static/images/tabbar/components.png',
+            selectedIconPath: '/static/images/tabbar/components_h.png',
+            text: '组件'
           },
           {
             pagePath: '/pages/tabbar/my/index',
