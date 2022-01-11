@@ -31,6 +31,18 @@
       "style": {
         "navigationBarTitleText": "忘记密码"
       }
+    },
+    {
+      "path": "pages/components/uview/index",
+      "style": {
+        "navigationBarTitleText": "uview组件"
+      }
+    },
+    {
+      "path": "pages/components/mescroll/index",
+      "style": {
+        "navigationBarTitleText": "mescroll组件"
+      }
     }
   ],
   "globalStyle": {
