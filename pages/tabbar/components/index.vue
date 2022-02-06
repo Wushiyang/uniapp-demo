@@ -9,11 +9,22 @@
       </template>
     </u-navbar>
 
-    <view class="list">
+
+
+  <u-list class="list">
+    <u-list-item class="item" v-for="(item, index) in list">
+        <view class="c-regular f28 mb20 lh60">
+          <view class="logo" :style="{ background: item.logo.bgColor }">
+            <u-image :src="item.logo.src" :width="item.logo.width" :height="item.logo.height"></u-image>
+          </view>
+          <view class="text" v-html="item.text"></view>
+        </view>
+        <view class="c-link f28" @tap.stop="() => $u.route(item.path)">去看看</view>
+    </u-list-item>
+  </u-list>
+
+<!--    <view class="list">
       <view class="item" v-for="(item, index) in list">
-        <!--        <view class="flex flex-row jc-center">
-          <u-image :src="item.logo" width="60rpx" height="60rpx"></u-image>
-        </view> -->
         <view class="c-regular f28 mb20 lh60">
           <view class="logo" :style="{ background: item.logo.bgColor }">
             <u-image :src="item.logo.src" :width="item.logo.width" :height="item.logo.height"></u-image>
@@ -22,7 +33,8 @@
         </view>
         <view class="c-link f28" @tap.stop="() => $u.route(item.path)">去看看</view>
       </view>
-    </view>
+    </view> -->
+
     <yyFooter :current="1" />
   </view>
 </template>
